@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0; */
+            text-decoration: none;
+            list-style: none;
+        }
+        body{
+            background-image: url("https://media.istockphoto.com/photos/young-man-pointing-to-futuristic-interface-picture-id810602672?k=20&m=810602672&s=612x612&w=0&h=PUQWGH1T69oFddgbKn9syCvsAd5_IG1GbpTkH5I35HA=");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        header{
+            position: sticky;
+            top: 0;
+        }
+        #box{
+            width: 100%;
+            height: 45px;
+            border: 2px solid black;
+            background-color:buttonhighlight;
+        }
+        #box1{
+            width: 10%;
+            height: 47px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 0px;
+        }
+        #box2{
+            width: 10%;
+            height: 47px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 0px;
+            margin-left: 170px;
+        }
+        #box3{
+            width: 10%;
+            height: 47px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 0px;
+            margin-left: 340px;
+        }
+        #box4{
+            width: 10%;
+            height: 47px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 0px;
+            margin-left: 510px;
+        }
+        #box5{
+            width: 10%;
+            height: 47px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 0px;
+            margin-left: 680px;
+        }
+        #box6{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            background-image: url("data:image/jpeg;base64,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");
+            background-size: 100%;
+            /* background-repeat: no-repeat; */
+            border-radius: 50%;
+            margin-top: 50px;
+        }
+        #box7{
+            width: 70%;
+            height: 70px;
+            border: 2px solid red;
+            margin-top: -120px;
+            margin-left: 200px;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        #box8{
+            width: 20%;
+            height: 300px;
+            /* border: 2px solid black; */
+            margin-top: 70px;
+            margin-left: 200px;
+        }
+        .box9{
+            width: 120px; 
+            height: 40px; 
+            font-size: 14px; 
+            color: blueviolet; 
+            background-color: black;
+            border-radius: 20px 20px;
+            border: 3px solid blue;
+        }
+        button:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="box"  >
+            <table  style="text-align:center;margin-top: -12px;">
+                <tr style="width:100%;height:-10px;margin-top: -20px;">
+                    <td width="20%">
+                        <h3 style="color: white;text-align:center"><a href="#" style="text-align:center;"><b style="margin-top:-10px">FeeReport</b></a></h3>
+                    </td>
+                    <td style="width:15%">
+                <h3 style="text-align:center"><a href="index.html" style=" text-align:center;">Home</a></h3>
+                    </td>
+                    <td style="width:30%">
+                <h3 style="color: white;text-align:center"><a href="AddAccountent.html" style=" text-align:center;">AddAccountent</a></h3>
+                    </td>
+                    <td style="width:26%">
+                <h3 style="color: white;text-align:center"><a href="ViewServlet" style=" text-align:center;">ViewAccountent</a></h3>
+                    </td>
+                    <td  style="text-align:center;width:20%">
+                <h3 style="color: white;text-align:center;"><a href="Logout.html" style=" text-align:center;">Logout</a></h3>
+                    </td> 
+                </tr>
+            </table>
+        </div>
+    </header>
+    <main>
+        <div id="box6" style="text-align:center;"><b style="color: red;">Admin</b></div>
+        <div id="box7" style="text-align: center;">
+            <h1 style="color:black;font-size:40px;margin-top: 3px;"><b><marquee behavior="scroll" direction="left">Admin Pannel</marquee></b></h1>
+        </div>
+        <div id="box8">
+            <p><a href="AddAccountent.html" style="color: black;font-size: 30px;font-family: bold;">AddAccountent</a></p>
+        
+            <p><a href="ViewServlet" style="color: black;font-size: 30px;font-family: bold;">View_Accountent</a></p>
+        </div>
+        <!-- <h1 style="color: red; text-align: center;font-size: 50px;">Admin Pannel</h1> -->
+    </main>
+    <footer>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <hr><br><br><br><br><p style="text-align: center;font-size: 20px;">deepmahur2003@gmail.com</p><br><br><br><br>
+    </footer>
+</body>
+</html>

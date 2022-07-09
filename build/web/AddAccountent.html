@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0; */
+            text-decoration: none;
+            list-style: none;
+        }
+        body{
+             background-image: url("https://media.istockphoto.com/photos/digital-communication-lifestyle-blog-writer-person-using-mobile-smart-picture-id979008970?k=20&m=979008970&s=612x612&w=0&h=3wJXGB5IDT1sYoFy-RQXBcmP2X3c3mas1JQi9ob3sqo="); 
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        header{
+            position: sticky;
+            top: 0;
+        }
+        #box{
+            width: 100%;
+            height: 50px;
+            border: 2px solid black;
+            background-color: lightgrey;
+        }
+        #box1{
+            width: 10%;
+            height: 50px;
+            /*border: 2px solid black;*/
+            margin-top: -3px;
+        }
+        #box2{
+            width: 10%;
+            height: 50px;
+            /*border: 2px solid black;*/
+            margin-top: -70px;
+            margin-left: 170px;
+        }
+        #box3{
+            width: 10%;
+            height: 50px;
+            /*border: 2px solid black;*/
+            margin-top: -69px;
+            margin-left: 340px;
+        }
+        #box4{
+            width: 10%;
+            height: 50px;
+            /*border: 2px solid black;*/
+            margin-top: -69px;
+            margin-left: 510px;
+        }
+        #box5{
+            width: 10%;
+            height: 50px;
+            /*border: 2px solid black;*/
+            margin-top: -69px;
+            margin-left: 680px;
+        }
+        #box6{
+            width: 40%;
+            height: 660px;
+             border: 2px solid black; 
+            /* background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIUAhQMBIgACEQEDEQH/xAAcAAEAAwADAQEAAAAAAAAAAAAAAQYHBAUIAwL/xABDEAABAgMEBwQFCQYHAAAAAAABAAIDBBEFIUFRBjFhcYGRsQcSodETFyJV8BQyQkNikrLB4SRSU4LC8RUjJTM1cnT/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAgED/8QAGxEBAQADAQEBAAAAAAAAAAAAAAECERIxIVH/2gAMAwEAAhEDEQA/ANvOtRX9NqH4GaYm+/E5IFc+JySv6BMAaXYBNZ6lAv8AMpXLgEuNLtwS6hqd5QOmJU11eAWf6UdosKUivlbEhsmIjSQ6Yf8A7bT9kfS36t6oc9pRbs+4mYtSZofow3+jHJtFUxtZa3u/bRTflevORm5ompmY5OZiO81zZPSC2ZJ3elrTm27DFLhydULeGdN/ry6qb+PRZlo52lRPSMgW9CaWm4TMJtO7/wBm+XJaTCiw40JkWC9r4Tx3muaahwzCmzSpX7ry6qb67eijHbnklwGzqsCvxmlc+JyTO+/E5JtpdgEH6Bqigc0QQc/HJMqi7AIf7BBf+ZQM6neU6YBPgBPglA47yqP2oW9Es+z4VnSry2PN1LyDe2GNfM3bgVeDhQbgsT7R5p0zpfOtJq2AGQm/dBPi4qsZusqs6kRF0QIiIC0Xspt57Y77EmIlWOBiS1T80i9zRwv4FZ0ux0cmnSWkFnTDT8yZYDuJofAlZZuNj0D8b064nJNRPXJB4YDNclmVRdgEzv3lN53lOG4IP0NWxQpHNQgjHqU1gXbgh105BNYN+8oGfiUyu3BNf5BPglAzpxKwnTgFul1qg/xh+ELduvRYv2mSxl9Lph9LpiHDiD7ob/Sqw9Zl4qqIi6IEREBfeQHen5UDWYzAPvBfBdropLfK9JrMgUrWZY4jY0949Eo30/2CbeZSu3eUy8AuLoZXbgmfic047ynwBkgkXIg2X7UQR0xKbhuCk4XbgozvuxKBr/MpwvwGSdcsk6dUDdq6rOe1+QJhyFpNHzSYD6DVW9teR5rRsdvRddpDZcO2bHmZB93pW+w7J4vB5rZdUrz8i+kxAiy0xEgTDCyNCcWRGH6JGtfNdXMREQFduyizzMW/FnXD/LlIRoftOu6VVKW36CWI6w7Bhw47KTUc+ljDIm4DgAONVOV+NixfACfBKZ+JzQDVduGS5rOG4Jv1dUw13Z5piM8skEjaiN+DmiCDjliUx1X4DJDr24bEwu1dUC6nxemO3onXonTqgi6gy6qc8+iX8cdi4VoWtZ1mtrPzsCAMnvAJ4a0FV0+0NNr/AOo2W0Cea2kSHq9OB/V1WTxYUSBFfBjMdDisNHMeKFp2hbRLad2HNWnAkZaPEiPjO7gi+jLWA4C+hv1al2trWDZdsNAtGShxXamv+a8fzC9VMtJ08/qReQAKk3ADFbA7s20fLif2toyEa7ou5sjRexrHeIklIsEYaojyXv5nVwVdw5U3QLQmKyNCtW2oPdLaOl5Z4vrg5wwpgFpWBqd5VdtfTKx7HtM2fOxIoiBgc97IfeDa4Gl9eC7CzdILJtSnyG0JeK46md6juRvUXda7LHoMkOrZjtQ+HVOuGxY0vrtyyS6n55phdq6p16IJG3wRBsRBB8Ex29Ex29F+Yj2Q4TnvcGw2gkucacSgk0ps6qpaQ6fWXZTnwZX9umm3FsJ1GNORd5VVM0z02mLYiRJOzXug2ePZLhc6Pvybs5qnK5j+ptWS19N7ctTvM+VGUgn6uWqzm7WVXHEvcXvJc463E1J4qEV+JSCQQWkgg1BFxC2rQXSVlvWb3I7wJ+XbSOP3xg4b8dqxRcqzLQmrKnoU7JRO5GhG46wRiCMQss22V6I4bgun0ot2XsCy4k3GIdFPswYdb4j8tw1ldZI6eWRHsJ9oTEX0UaEKRZbW8vwDcwcDzWWaRW5N2/aLpubPdaLoUIfNhtyG3MqJj9Va4M3MxpyajTUy/vxozy97syV8URdEO8sjS23LJIEvPPiQh9VHJiN4VvHAq/WB2jyE6WwbVhGSin6yvehu3nW3jdtWSosuMrdvSDHtiNa+G5r2uFWuaaima/WGzqsP0U0snNHozYdXRpBx9uXJ1bW5HwK2iQnIFoSkKblIoiQYre814y81zs0qVyRt1ogRY1B8Ms1TO1S0Ikno62XhEh05GEN5GDACTzoArpjt6LPe2Cn+G2bT+O78K2esrLkRF1QIiICIiAiIgIiICIiCVpPZDaD3Mn7Ne4mGzux4Yyrc78vFZqr52Q/81Pf+UfiCzLxsauL9etEbqyRcloO79VTO1Szos5o8yYgguMnG9I8D9wggnhceauZ115nJQQHNLXCrTd3SNaQebkWtW12bWbORXxrOjvkXuvLA3vwwdguI5ro3dltog0baMoRgSxwXXqI1VBRXz1XWn7wk+T/JPVdafvCT5O8k6hqqGivnqutP3hJ8neSeq60/eEnXc7yTqGlDRXz1XWn7wk+T/JPVdafvCT5O8k6hpQ0V89V1p+8JPk/yT1XWn7wk+T/JOoaUNFfPVdafvCT5P8lI7LrSr7VoyYGPsuKdQ0oS0rshs+I0T1pPaRDeGwYX2qGrju1eK5Fl9mEnBe19qT0SZoa+ihN9G07zUnlRXyWl4MrAZAl2NhQoY7rWsFA0ZBTlltsj6hECKFJIqVFPFEQKcskp4oiBRKYZoiBRO7+u1EQKJTBEQKc0oiIAFb8UoOSIgUSiIgkIiIP/2Q=="); */
+            /* background-size: 100%; */
+            /* border-radius: 50%; */
+            margin-top: 70px;
+        }
+       
+      
+       
+       #box8{
+           width: 30%;
+           height: 600px;
+             border: 2px solid black; 
+             /* background-color: blue;  */
+          margin: auto;
+          margin:auto;
+          border-radius: 30px;
+       }
+       #box9
+       {
+           width: 101%;
+           height: 300px;
+           border: 2px solid white;
+           background-color: black;
+           /* border-radius: 30px; */
+           margin-top: 30px;
+           margin-left: -10px;
+       }
+       #box10{
+           width: 90%;
+           height: 30px;
+           border: 2px solid yellow;
+           background-color: black;
+           border-radius: 30px;
+           margin: auto;
+           margin-top: 10px;
+       }
+       #box11{
+           width: 100%;
+           height: 1000px;
+           /* border: 2px solid black; */
+           margin-top: 20px;
+       }
+    </style>
+</head>
+<body>
+    <!-- <div id="box9"> -->
+    <header>
+        <div id="box">
+            <div id="box1">
+                <h3 style="color: white;text-align:center"><a href="#" style="color: white; text-align:center;">FeeReport</a></h3>
+            </div>
+            <div id="box2">
+                <h3 style="color: white;text-align:center"><a href="index.html" style="color: white; text-align:center;">Home</a></h3>
+            </div>
+            <div id="box3">
+                <h3 style="color: white;text-align:center"><a href="AddAccountent.html" style="color: white; text-align:center;">AddAccountent</a></h3>
+            </div>
+            <div id="box4">
+                <h3 style="color: white;text-align:center"><a href="ViewServlet" style="color: white; text-align:center;">ViewAccountent</a></h3>
+            </div>
+            <div id="box5">
+                <h3 style="color: white;text-align:center"><a href="Logout.html" style="color: white; text-align:center;">Logout</a></h3>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="box11">
+      <!-- <div id="box6"> -->
+          <h1 style="font-size: 50px;">Add Accountent Form</h1>
+          <br>
+          <br>
+          
+          <div id="box8">
+              <br>
+              <br>
+              <div id="box10">
+                  <h3 style="color:white;text-align: center; margin-top: 4px;">Fill The Form</h3>
+              </div><br><br>
+              
+            <hr>
+            <form action="SaveServlet" method="post">
+        <table >
+            
+            <tr>
+                <td><h2><b>Id:</b></h2></td>
+                <td><input type="text" name="Id2" placeholder="Enter Your id" style="border-radius: 20px;border-color:black;text-align:center;font-size: 20px;background-color: aqua;"></td>
+            </tr>
+            <tr>
+                <td><h2><b>Name:</b></h2></td>
+                <td><input type="text" name="Name2" placeholder="Enter Your Name" style="border-radius: 20px;border-color:black;text-align:center;font-size: 20px;background-color: pink;"></td> 
+            </tr>
+            <tr>
+                <td><h2><b>Password:</b></h2></td>
+                <td><input type="text" name="Pass2" placeholder="Enter your Password" style="border-radius: 20px;border-color:black;text-align:center;font-size: 20px;background-color: aqua;"></td> 
+            </tr>
+            <tr>
+                <td><h2><b>Gmail:</b></h2></td>
+                <td><input type="text" name="Gmail2" placeholder="xyz@gmial.com" style="border-radius: 20px;font-size: 20px;border-color:black;text-align:center;background-color: pink;"></td> 
+            </tr>
+            <tr>
+                <td><h2><b>Address:</b></h2></td>
+                <td><textarea name="Address2" id="Address" cols="21" rows="3" placeholder="Permanant Address...." style="border-radius: 20px;border-color:black;text-align:center;font-size: 20px;background-color: aqua;"></textarea></td> 
+            
+            </tr>
+            <tr>
+                <td><h2><b>Contect:</b></h2></td>
+                <td><input type="text" name="Contect2" placeholder="+91**********" style="border-radius: 20px;font-size: 20px;border-color:black;text-align:center;background-color: pink;"></td> 
+            </tr>
+<!--            <tr>
+                <td><h2><b>Gender:</b></h2></td>
+                <td><input type="radio" id="gender" name="gender"value="Male"><b style="font-size: 20px;font-family: initial;">Male</b>
+                    
+                    <input type="radio" id="gender" name="gender"value="feMale"><b style="font-size: 20px;">FeMale</b></td>
+            </tr>-->
+            <tr>
+                <td style="text-align: right;size:20px;">
+                    <input type="checkbox" value="check" name="Condition" >
+                </td>
+                <td style="font-size: 20px;">Are you Sure To fill this details..</td>
+            </tr>
+            
+<!--            <tr>
+                <td>          </td>
+                <td><button style="background-color: blue;font-size:20px;border-radius: 20px;color: white;"><a href="SaveServlet" style="color:black;font-family:initial;">Register</a></button>              <button style="background-color: blue;font-size:20px;size:70px;border-radius: 20px;color: white;"><a href="AddAccountent.html" style="color:black;font-family:initial">Reset</a></button></td>
+            </tr>-->
+<tr>
+    <td> </td>
+    <td><input type="submit" value="Register" style="border-radius:40px;font-size: 20px;background-color: blue;">
+   <button style="border-radius:30px;background-color: blue;"><a href="Addaccountent.html" style="font-size:20px;background-color: blue;color: black;border-radius: 30px;">Reset</a></button></td>
+</tr>
+            
+        </table>
+    </form>
+    
+        </div>
+    </div>
+        
+      
+    </main>
+<!-- </div> -->
+    <footer>
+        <div id="box9">
+        <br>
+ <br><br><br><br><p style="text-align: center;font-size: 20px;color: white;">deepmahur2003@gmail.com</p><br><br><br><br><br><br>
+ <marquee behavior="full" direction="right" style="color: white;font-size: 20px;">-:Thanks for Visit this Page:-</marquee>
+    </footer>
+    </div>
+</body>
+</html>
