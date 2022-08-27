@@ -1,9 +1,10 @@
 public class Pujo {
     private String Name,Password,Gmail,Address;
     private String Contact;
-    private String id;
+    private int id;
     private String condition;
-    private String Sex,Cource,Deposit,Fee,Dues;
+    private String Sex,Cource;
+    private int Deposit,Fee,Dues;
     public String getSex()
     {
         return Sex;
@@ -16,31 +17,31 @@ public class Pujo {
     {
         return Cource;
     }
-    public void setCource(String Sex)
+    public void setCource(String Cource)
     {
         this.Cource=Cource;
     }
-        public String getDeposit()
+        public int getDeposit()
     {
         return Deposit;
     }
-    public void setDeposit(String Deposit)
+    public void setDeposit(int Deposit)
     {
         this.Deposit=Deposit;
     }
-        public String getFee()
+        public int getFee()
     {
         return Fee;
     }
-    public void setFee(String Fee)
+    public void setFee(int Fee)
     {
         this.Fee=Fee;
     }
-        public String getDues()
+        public int getDues()
     {
         return Dues;
     }
-    public void setDues(String Dues)
+    public void setDues(int Dues)
     {
         this.Dues=Dues;
     }
@@ -52,11 +53,11 @@ public class Pujo {
     {
         this.condition=condition;
     }
-    public String getId()
+    public int getId()
     {
         return id;
     }
-    public void setId(String id)
+    public void setId(int id)
     {
         this.id=id;
     }

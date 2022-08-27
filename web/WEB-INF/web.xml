@@ -72,6 +72,38 @@
         <servlet-name>Search</servlet-name>
         <servlet-class>Search</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Delete</servlet-name>
+        <servlet-class>Delete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FeeDue</servlet-name>
+        <servlet-class>FeeDue</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Edit1</servlet-name>
+        <servlet-class>Edit1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Edit2</servlet-name>
+        <servlet-class>Edit2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Edit0</servlet-name>
+        <servlet-class>Edit0</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Edit</servlet-name>
+        <servlet-class>Edit</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Delete1</servlet-name>
+        <servlet-class>Delete1</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Admin1</servlet-name>
         <url-pattern>/Admin1</url-pattern>
@@ -143,6 +175,38 @@
     <servlet-mapping>
         <servlet-name>Search</servlet-name>
         <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete</servlet-name>
+        <url-pattern>/Delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FeeDue</servlet-name>
+        <url-pattern>/FeeDue</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Edit1</servlet-name>
+        <url-pattern>/Edit1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Edit2</servlet-name>
+        <url-pattern>/Edit2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Edit0</servlet-name>
+        <url-pattern>/Edit0</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Edit</servlet-name>
+        <url-pattern>/Edit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete1</servlet-name>
+        <url-pattern>/Delete1</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

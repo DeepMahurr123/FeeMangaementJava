@@ -13,6 +13,8 @@ public class SavedRecord extends HttpServlet
     {
         res.setContentType("text/html");
         PrintWriter out=res.getWriter();
+        String id=req.getParameter("id");
+        int a=Integer.parseInt(id);
         String name=req.getParameter("name");
         String gmail=req.getParameter("gmail");
         String sex=req.getParameter("Gender");
@@ -33,12 +35,13 @@ out.println("<tr><td><button style='background-color:blue;border-radius:30px;col
         + "<a href='AccountentPortal.html'><b style='color:white;'>Add_Accountent</b></a></button></td><td>"
         + "<button style='background-color:blue;border-radius:30px;color:white;'><a href='Student.html' style='color:white;'>"
         + "<b style='color:white;'>Add_Student</b></a></button></td><td><button style='background-color:blue;border-radius:30px;color:white;'>"
-        + "<a href='ViewStudent.html' style='color:white;'>"
+        + "<a href='ViewStudent' style='color:white;'>"
         + "<b style='color:white;'>View_Student</b></a></button></td></tr>");
 
 out.println("<body style='background-color:yellow;'>");
 out.println("<table border=1 width=40% ");
 out.println("<tr><th>Id's</th><th>Details</th></tr>");
+out.println("<tr><th>Id</th><td>"+a+"</td></tr>");
 out.println("<tr><th>Name</th><td>"+name+"</td></tr>");
 out.println("<tr><th>Gmail</th><td>"+gmail+"</td></tr>");
 out.println("<tr><th>Sex</th><td>"+sex+"</td></tr>");
@@ -60,7 +63,7 @@ out.println("<br>");
 out.println("<br>");
 out.println("<br>");
 out.println("<br>");
-out.println("<h2><marquee>Hello "+name+" Welcome ...You Are Registerd....Thanks(-_-)</marquee></h2>");
+out.println("<h2><marquee>Hello "+name+" Welcome ...You Are Registerd....Thanks....</marquee></h2>");
 out.println("</body>");
 out.println("</html>");
     }

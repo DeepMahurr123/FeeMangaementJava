@@ -23,7 +23,7 @@ public class Search extends HttpServlet {
         {
            Class.forName("com.mysql.jdbc.Driver");
         Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/feemanagement","root","Deep@123");
-        PreparedStatement ps=con.prepareStatement("select * from student "); 
+        PreparedStatement ps=con.prepareStatement("select * from student1 "); 
         ResultSet rs=ps.executeQuery();
         while(rs.next())
         {
@@ -37,15 +37,17 @@ public class Search extends HttpServlet {
          String g= rs.getString(7);
           String h=rs.getString(8);
          String i= rs.getString(9);
+         String j=rs.getString(10);
+         
           if(search.equals(a))
           {
               out.println("<body style='background-color:pink'");
               out.println("<br>");
-              out.println("<h1 style='text-align:center'> The Details of   "+a+"....</h1> ");
+              out.println("<h1 style='text-align:center'> The Details of   "+b+"....</h1> ");
               out.println("<table border=1 width=100%>");
-              out.println("<tr><th>Name</th><th>Gmail</th><th>Sex</th><th>Cource</th><th>Fee</th>"
+              out.println("<tr><th>Id</th><th>Name</th><th>Gmail</th><th>Sex</th><th>Cource</th><th>Fee</th>"
                       + "<th>Deposit</th><th>Dues</th><th>Address</th><th>Contact</th></tr>");
-              out.println("<tr><td>"+a+"</td><td>"+b+"</td><td>"+c+"</td><td>"+d+"</td><td>"+e+"</td><td>"+f+"</td><td>"+g+"</td><td>"+h+"</td><td>"+i+"</td></tr>");
+              out.println("<tr><td>"+a+"</td><td>"+b+"</td><td>"+c+"</td><td>"+d+"</td><td>"+e+"</td><td>"+f+"</td><td>"+g+"</td><td>"+h+"</td><td>"+i+"</td><td>"+j+"</td></tr>");
               out.println("</table>");
               out.println("</body>");
            

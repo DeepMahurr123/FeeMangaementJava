@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,6 +35,8 @@ public class CheckRecord extends HttpServlet
                {
                    req.getRequestDispatcher("AccountentPortal.html").include(req,res);
                    t++;
+                   Cookie cookie=new Cookie("deep",name);
+                   res.addCookie(cookie);
                    break;
                }
     

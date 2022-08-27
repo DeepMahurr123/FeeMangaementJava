@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,7 +36,22 @@ public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOExce
 //          e.setGmail(gmail);
 //          e.setAddress(address);
 //          e.setContact(contect);
-          
+//Cookie cookie[]=req.getCookies();
+//if(cookie==null)
+//{
+//    out.println("<h1>Please Login first ...</h1.");
+//}
+//    else
+//{
+//    for(Cookie s:cookie)
+//    {
+//        String ns=s.getName();
+//        if(ns.equals("deep"))
+//        {
+//            String v=s.getValue();
+//       out.println("<h1> Name is: "+v+" </h1>");
+//        }
+//    }
     try 
     {
    Class.forName("com.mysql.jdbc.Driver");
@@ -48,22 +64,23 @@ public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOExce
         + "<a href='AddAccountent.html'><b style='color:white;'>Add_Accountent</b></a></button></td><td>"
         + "<button style='background-color:blue;border-radius:30px;color:white;'><a href='AdminPortal.html' style='color:white;'>"
         + "<b style='color:white;'>AdminPannel</b></a></button></td><td><button style='background-color:blue;border-radius:30px;color:white;'>"
-        + "<a href='Logout.html' style='color:white;'>"
+        + "<a href='Logout' style='color:white;'>"
         + "<b style='color:white;'>Logout</b></a></button></td></tr>");
    out.println("<br>");
    out.println("<br>");
    out.println("<table border=1 width=100%");
-   out.println("<tr><th>Id</th><th>Name</th><th>Password</th><th>Gmail</th><th>Address</th><th>Contect</th></tr>");
+   out.println("<tr><th>Id</th><th>Name</th><th>Password</th><th>Gmail</th><th>Address</th><th>Contect</th><th>Edit</th><th>Delete</th></tr>");
   ResultSet rs=ps.executeQuery();
   while(rs.next())
   {
-    String a=  rs.getString(1);
-   String b=   rs.getString(2);
+    int a=  rs.getInt(1);
+    String b=   rs.getString(2);
      String c =rs.getString(3);
      String d= rs.getString(4);
       String e=rs.getString(5);
       String f=rs.getString(6);
-      out.println("<tr><td>"+a+"</td><td>"+b+"</td><td>********</td><td>"+d+"</td><td>"+e+"</td><td>"+f+"</td></tr>");
+      
+      out.println("<tr><td>"+a+"</td><td>"+b+"</td><td>"+c+"</td><td>"+d+"</td><td>"+e+"</td><td>"+f+"</td><td><a href='Edit0?id="+a+"'>Edit</a></td><td><a href='Delete1?id="+a+"'>Delete</a></td></tr>");
   }
     
     
@@ -74,4 +91,7 @@ public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOExce
     {
         out.println(e);
     }
-}}
+    }
+
+
+}

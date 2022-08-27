@@ -20,7 +20,8 @@ public class SaveServlet extends HttpServlet
         {
           res.setContentType("text/html");
           PrintWriter out=res.getWriter();
-          String id=req.getParameter("Id2");
+          String sid=req.getParameter("Id2");
+          int id=Integer.parseInt(sid);
           String name=req.getParameter("Name2");
           String password=req.getParameter("Pass2");
           String gmail=req.getParameter("Gmail2");
@@ -36,7 +37,7 @@ public class SaveServlet extends HttpServlet
           e.setContact(contect);
           
          
-            int i=Adm.save(e);  
+            int i=Adm.save1(e);  
           
             if(i>0)
             {
